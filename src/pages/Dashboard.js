@@ -1,12 +1,11 @@
 import React from 'react'
-import { Route, Routes, Redirect, Navigate } from 'react-router-dom'
+import { Route, Routes, Navigate } from 'react-router-dom'
 import Agr from '../components/Agr'
 import Agr2 from '../components/Agr2'
 import AgrForm from '../components/Agr_form'
 import CommonDash from '../components/CommonDash'
 import Leave from '../components/Leave'
 import Navbar from '../components/Navbar'
-import SelectPlace from '../components/SelectPlace'
 import Sidebar from '../components/Sidebar'
 import Vcm01 from '../components/Vcm01'
 import Vcm02 from '../components/Vcm02'
@@ -15,6 +14,9 @@ import ViewStatus from '../components/ViewStatus'
 import Vs01 from '../components/Vs01'
 import Vs02 from '../components/Vs02'
 import WeatherForacst from '../components/weatherForacst'
+import SelectPlace from '../components/SelectPlace'
+import CollectorProfile from '../components/Collector_profile'
+import UpdateProfile from '../components/UpdateProfile'
 
 function Dashboard() {
   return (
@@ -38,6 +40,9 @@ function Dashboard() {
               <Route path="/frame10" element={<Leave/>}/>
               <Route path="/frame11" element={<ViewStatus/>}/>
               <Route path="/frame12" element={<CommonDash/>}/>
+              <Route path="/frame13" element={<SelectPlace/>}/>
+              <Route path="/frame14" element={<CollectorProfile/>}/>
+              <Route path="/frame15" element={<UpdateProfile/>}/>
             </Routes>
         </div>
     </div>

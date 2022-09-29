@@ -2,16 +2,10 @@
   height: 40vmin;
   pointer-events: none;
 }
-.App{
-  /* height: 100vh; */
-  
-}
 .status{
   background: #007AFF;
 }
-.primary_text{
-  /* color: #515151 !important; */
-}
+
 .primary_text{
   color: #ADADC0 !important;
 }
@@ -42,9 +36,7 @@
 .clickable{
   cursor: pointer !important
 }
-.primary_btn{
-  /* color: #ADADC0 !important */
-}
+
 .proceed_btn{
   background-color: #FF9933
 }
@@ -156,9 +148,6 @@ li:hover h6{
   width: 50%;
   min-width: 300px;
 }
-.summary_title{
-
-}
 .search_grp {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   width: 40%;
@@ -190,9 +179,6 @@ li:hover h6{
 }
 .req_card{
   width: 90%
-}
-.payment_big_card{
-
 }
 .method_card{
   border-radius: 12px;
@@ -277,6 +263,10 @@ li:hover h6{
 .frame .subtitle{
   color: #38A3C5
 }
+.active_location{
+  background: rgba(0, 0, 0, 0.25);
+  border: 3px solid #FF0000;
+}
 .place_location{
   background: #E4E4F0;
 } 
@@ -291,12 +281,7 @@ li:hover h6{
 .place_pill, .district_btn{
   background-color: #FFFFFF;
 }
-.vehicle_table{
-  /* border: 1px solid #E0E7ED; */
-  /* border-radius: 16px; */
-}
 .vehicle_table .note_row td{
-
   background: #E0E4F6;
 }
 .pending{
@@ -318,10 +303,57 @@ li:hover h6{
 .pagination_input{
   width: 50px
 }
+.profile .col-md-8{
+  background: #C8C8FF;
+}
+.profile .col-md-4{
+  background: #596653;
+}
+.card_user{
+  background: rgba(255, 255, 255, 0.54);
+}
+.profile .imgdiv{
+  width:auto;
+  height:auto
+}
+.imgdiv{
+  position: relative;
+}
+.update_img{
+  position: absolute;
+  bottom:0;
+  right:0
+}
+.badge_card{
+  border-bottom: 1px  Solid#FDFBFB;
+  width: 95%;
+}
+.star_circle{
+  background-color: #F44336;
+}
+.file_input{
+    visibility: none;
+    display: none
+}
+.profile_form{
+  width: 80%;
+}
+.back_btn{
+  background-color: #007AFF;
+  border-radius: 20px;
+}
+.update_btn{
+  background-color: #3EB81F;
+  border-radius: 20px;
+}
+
 @media (max-width:992px){
   .sidebar_div{
     width: 20%;
     min-width: 0 !important;
+  }
+  .profile_form{
+    width: 100%;
   }
 }
 @media (prefers-reduced-motion: no-preference) {

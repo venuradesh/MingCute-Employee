@@ -1,6 +1,9 @@
 import React from 'react'
+import { useLocation } from 'react-router-dom';
 
 function Navbar() {
+  const location = useLocation();
+    console.log(location.pathname);
   return (
     <div className="container navbar px-3 py-2 d-md-flex align-items-center justify-content-between position-relative">
         <div className="brand mb-2 mb-md-0 d-flex align-items-center justify-content-start justify-content-md-center">
@@ -15,6 +18,8 @@ function Navbar() {
         </svg>
         <h5 className='primary_text mb-0'>Dashboard</h5>
         </div>
+        {
+          location.pathname!=="/frame15"  &&
         <div className='search_grp rounded-2 d-flex align-items-center justify-content-start py-1 px-lg-2'>
         <svg className='mx-1' width='24px' height='24px' viewBox='0 0 24 24' version='1.1' >
             <g id='页面-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'>
@@ -26,6 +31,7 @@ function Navbar() {
             </svg>
             <input type='text' placeholder='Search'  />
         </div>
+        }
     </div>
   )
 }

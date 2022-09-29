@@ -53,8 +53,7 @@ function SelectPlace() {
                 </div>
                 <div className="col-3 text-center ">
                       <h5>Select a distrcit </h5>
-                      {/* <div  */}
-                      <button className="btn district_btn py-0 my-4 mx-auto d-flex align-items-center justify-content-center">Distrcit 3</button>
+                      <button className="btn active_location district_btn py-0 my-4 mx-auto d-flex align-items-center justify-content-center">Distrcit 3</button>
                       <button className="btn district_btn py-0 my-4 mx-auto d-flex align-items-center justify-content-center">Distrcit 3</button>
                       <button className="btn district_btn py-0 my-4 mx-auto d-flex align-items-center justify-content-center">Distrcit 3</button>
                 </div>
