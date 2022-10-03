@@ -4,13 +4,13 @@ function AgrForm() {
   return (
     <div className="h-100  container-fluid">
       <div className="main_body payment_card">
-        <div className="card_body container mt-5">
+        <div className="card_body container my-5">
         <div className="top w-100 ">
             <button className=" btn status primary_btn ms-auto d-flex align-items-center justify-content-end py-1 mb-3 ">
               View Status
             </button>
           </div>
-          <div className="card payment_big_card mx-auto shadow my-3 px-4">
+          <div className="card payment_big_card mx-auto shadow my-3 mb-5 px-4">
             <h5 className="req_title py-3  add_title">Payment Details :</h5>
             <div className="req_form">
               <div className="input_grp mb-3">
