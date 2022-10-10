@@ -1,12 +1,18 @@
 import React from 'react'
+import { useNavigate } from "react-router-dom";
 
 function Vcm02() {
+  const navigate = useNavigate();
+
+  function goList() {
+    navigate("/frame8");
+  }
   return (
     <div className="h-100  container-fluid">
     <div className="main_body">
       <div className="card_body container mt-5">
         <div className="top w-100 ">
-            <button className=" btn status primary_btn ms-auto d-flex align-items-center justify-content-end py-1 mb-3 ">
+            <button onClick={goList} className=" btn status primary_btn ms-auto d-flex align-items-center justify-content-end py-1 mb-3 ">
               View Status
             </button>
           </div>
@@ -95,7 +101,7 @@ function Vcm02() {
           </div>
 
           <div className="bottom w-100 text-center mt-2">
-            <button className=" btn primary_btn proceed_btn mx-auto py-1 mb-3 ">
+            <button onClick={goList} className=" btn primary_btn proceed_btn mx-auto py-1 mb-3 ">
             Submit
             </button>
           </div>

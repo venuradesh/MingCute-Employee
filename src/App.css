@@ -372,6 +372,9 @@ li:hover h6{
   border-radius: 0;
   border: none;
 }
+.link{
+  text-decoration: none !important;
+}
 @media (max-width:992px){
   .sidebar_div{
     width: 20%;

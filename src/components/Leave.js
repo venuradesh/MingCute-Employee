@@ -1,12 +1,19 @@
 import React from 'react'
+import { useNavigate } from "react-router-dom";
+
 
 function Leave() {
+  const navigate = useNavigate();
+
+  function viewStatus() {
+    navigate("/frame11");
+  }
   return (
     <div className="h-100  container-fluid">
     <div className="main_body">
       <div className="card_body container mt-5">
       <div className="top w-100 ">
-          <button className=" btn status primary_btn ms-auto d-flex align-items-center justify-content-end py-1 mb-3 ">
+          <button onClick={viewStatus} className=" btn status primary_btn ms-auto d-flex align-items-center justify-content-end py-1 mb-3 ">
             View Status
           </button>
         </div>

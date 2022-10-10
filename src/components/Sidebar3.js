@@ -1,15 +1,20 @@
 import React from "react";
 import logo from "../logo.svg";
 import { useLocation, Link, useNavigate } from "react-router-dom";
-function Sidebar() {
+
+function Sidebar3() {
+    const navigate = useNavigate();
+  
+  function leaveRequest() {
+    navigate("../schedule/frame4");
+  }
   return (
     <div className="sidenav_body primary_bg  h-100">
-      <div className="p-2 px-3">
+      <div className="p-2 px-3 ">
 
-      
-      <div className="d-flex align-items-center justify-content-center">
+        <div className="d-flex align-items-center justify-content-start">
 
-        {false && (
+        {true && (
         <div className="back text-start py-2 pb-3">
           <svg width="52" height="12" viewBox="0 0 52 12" fill="none" xmlns="http://www.w3.org/2000/svg">
           <circle cx="6" cy="6" r="6" fill="#FF6252"/>
@@ -22,8 +27,8 @@ function Sidebar() {
 
         </div>
       )}
-      {true && (
-              <Link to="/frame1">
+      {false && (
+              <Link to="/admin/frame1">
         <div className="back text-center ms-4 clickable py-2 pb-3">
           <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
             <g
@@ -58,7 +63,6 @@ function Sidebar() {
         
        </div>
 
-
       <div className="brand_title mb-3 d-flex align-items-center justify-content-center">
         <svg className="mx-2" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" >
             <g id="页面-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
@@ -73,7 +77,6 @@ function Sidebar() {
 
         <h5 className="light_text mb-0 d-none d-lg-block">MingCute</h5>
       </div>
-
       <div className="side_search_grp d-none d-lg-flex rounded-2  align-items-center justify-content-start  ps-2 py-1">
         <div className="">
           <svg
@@ -117,9 +120,22 @@ function Sidebar() {
       </div>
 
       <div className="side_body pb-4">
-      <Link to="/frame12" className="link clickable"> 
-        <div className="dash  my-3 d-flex align-items-end justify-content-center justify-content-lg-start">
+      {/* <Link to="/admin/ad/frame16" className="link" >
+        <div className="dash   my-3 d-flex align-items-end justify-content-center justify-content-lg-start">
           <div className="me-lg-2 ">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5.83331 2.50008V3.33341C5.83331 4.25389 6.5795 5.00008 7.49998 5.00008H12.5C13.4205 5.00008 14.1666 4.25389 14.1666 3.33341V2.50008H15C15.9205 2.50008 16.6666 3.24627 16.6666 4.16675V13.3334C16.6666 16.0948 14.4281 18.3334 11.6666 18.3334H4.99998C4.0795 18.3334 3.33331 17.5872 3.33331 16.6667V4.16675C3.33331 3.24627 4.0795 2.50008 4.99998 2.50008H5.83331ZM9.99998 11.6667H7.49998C7.03975 11.6667 6.66665 12.0398 6.66665 12.5001C6.66665 12.9603 7.03975 13.3334 7.49998 13.3334H9.99998C10.4602 13.3334 10.8333 12.9603 10.8333 12.5001C10.8333 12.0398 10.4602 11.6667 9.99998 11.6667ZM12.5 8.33341H7.49998C7.03975 8.33341 6.66665 8.7065 6.66665 9.16675C6.66665 9.59412 6.98835 9.94634 7.4028 9.99448L7.49998 10.0001H12.5C12.9602 10.0001 13.3333 9.627 13.3333 9.16675C13.3333 8.7065 12.9602 8.33341 12.5 8.33341ZM11.6666 1.66675C12.1269 1.66675 12.5 2.03985 12.5 2.50008C12.5 2.92744 12.1783 3.27967 11.7638 3.32781L11.6666 3.33341H8.33331C7.87308 3.33341 7.49998 2.96031 7.49998 2.50008C7.49998 2.07272 7.82168 1.72049 8.23613 1.67235L8.33331 1.66675H11.6666Z" 
+              fill="#007AFF" fillOpacity="1"/>
+              </svg>
+          </div>
+          <h6 className="mb-0 secondary_text  d-none d-lg-block">Dashboard</h6>
+        </div>
+        </Link>  */}
+
+        <ul className="ps-0 ps-lg-2">
+        <li className="my-4">
+          <Link to="/profile/frame14"  className={`link d-flex clickable align-items-center justify-content-center justify-content-lg-start `}>
+            <div className="me-lg-2 ">
             <svg
               className=""
               width="24px"
@@ -152,203 +168,81 @@ function Sidebar() {
                 </g>
               </g>
             </svg>
-          </div>
-          <h6 className="mb-0 secondary_text d-none d-lg-block">Dashboard</h6>
-        </div>
-        </Link>
 
-        <ul className="ps-0 ps-lg-4">
-          <li
-            className={`my-4 `}
-          >
-            <Link to="/frame9" className="link clickable d-flex clickable align-items-center justify-content-center justify-content-lg-start ">
-            <div className="me-lg-2 ">
-              <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-                <g
-                  id="页面-1"
-                  stroke="none"
-                  strokeWidth="1"
-                  fill="none"
-                  fillRule="evenodd"
-                >
-                  <g
-                    id="Weather"
-                    transform="translate(-576.000000, -48.000000)"
-                    fillRule="nonzero"
-                  >
-                    <g
-                      id="sun_cloudy_fill"
-                      transform="translate(576.000000, 48.000000)"
-                    >
-                      <rect id="矩形" x="0" y="0" width="24" height="24"></rect>
-                      <path
-                        d="M11,6 C13.6623,6 15.9179,7.73309 16.7033,10.1322 C19.1625,10.6813 21,12.8756 21,15.5 C21,18.4635122 18.6562522,20.8795407 15.7212095,20.9956329 L15.5,21 L6.5,21 C4.01472,21 2,18.9853 2,16.5 C2,14.5384 3.2545,12.8708 5.00531,12.2544 C5.00178,12.17 5,12.0852 5,12 C5,8.68629 7.68629,6 11,6 Z M16.0001,3 C19.3138,3 22.0001,5.68629 22.0001,9 C22.0001,10.1679 21.6664,11.2578 21.0892,12.1797 C20.2816,10.8231 18.994,9.78544 17.4608,9.30094 C16.4667,6.92421 14.1994,5.21247 11.5115,5.0184 C12.6106,3.78022 14.2142,3 16.0001,3 Z"
-                        id="形状"
-                      ></path>
-                    </g>
-                  </g>
-                </g>
-              </svg>
             </div>
             <h6 className="mb-0 secondary_text d-none d-lg-block">
-              Weather Forcasting
-            </h6>
-            </Link>
-          </li>
-
-          <li className="my-4 d-flex clickable align-items-center justify-content-center justify-content-lg-start">
-          <Link to="/frame10" className="link clickable d-flex clickable align-items-center justify-content-center justify-content-lg-start ">
-            <div className="me-lg-2 ">
-              <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-                <g
-                  id="页面-1"
-                  stroke="none"
-                  strokeWidth="1"
-                  fill="none"
-                  fillRule="evenodd"
-                >
-                  <g
-                    id="File"
-                    transform="translate(0.000000, -336.000000)"
-                    fillRule="nonzero"
-                  >
-                    <g
-                      id="profile_fill"
-                      transform="translate(0.000000, 336.000000)"
-                    >
-                      <rect id="矩形" x="0" y="0" width="24" height="24"></rect>
-                      <path
-                        d="M20,3 C21.1046,3 22,3.89543 22,5 L22,19 C22,20.1046 21.1046,21 20,21 L4,21 C2.89543,21 2,20.1046 2,19 L2,5 C2,3.89543 2.89543,3 4,3 L20,3 Z M17,15 L7,15 C6.44772,15 6,15.4477 6,16 C6,16.5523 6.44772,17 7,17 L17,17 C17.5523,17 18,16.5523 18,16 C18,15.4477 17.5523,15 17,15 Z M10,7 L8,7 C6.94563773,7 6.08183483,7.81587733 6.00548573,8.85073759 L6,9 L6,11 C6,12.0543909 6.81587733,12.9181678 7.85073759,12.9945144 L8,13 L10,13 C11.0543909,13 11.9181678,12.18415 11.9945144,11.1492661 L12,11 L12,9 C12,7.94563773 11.18415,7.08183483 10.1492661,7.00548573 L10,7 Z M17,11 L14,11 C13.4477,11 13,11.4477 13,12 C13,12.51285 13.386027,12.9355092 13.8833761,12.9932725 L14,13 L17,13 C17.5523,13 18,12.5523 18,12 C18,11.48715 17.613973,11.0644908 17.1166239,11.0067275 L17,11 Z M10,9 L10,11 L8,11 L8,9 L10,9 Z M17,7 L14,7 C13.4477,7 13,7.44772 13,8 C13,8.55228 13.4477,9 14,9 L17,9 C17.5523,9 18,8.55228 18,8 C18,7.44772 17.5523,7 17,7 Z"
-                        id="形状"
-                      ></path>
-                    </g>
-                  </g>
-                </g>
-              </svg>
-            </div>
-            <h6 className="mb-0 secondary_text d-none d-lg-block">
-              Leave Management
+            Dashboard
             </h6>
             </Link>
           </li>
 
           <li className="my-4 ">
-          <Link to="/frame7" className="link clickable d-flex clickable align-items-center justify-content-center justify-content-lg-start ">
+          <Link to="/profile/frame14"  className={`link d-flex clickable align-items-center justify-content-center justify-content-lg-start `}>
             <div className="me-lg-2 ">
-              <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-                <g
-                  id="页面-1"
-                  stroke="none"
-                  strokeWidth="1"
-                  fill="none"
-                  fillRule="evenodd"
-                >
-                  <g
-                    id="Transport"
-                    transform="translate(0.000000, -48.000000)"
-                    fillRule="nonzero"
-                  >
-                    <g
-                      id="truck_fill"
-                      transform="translate(0.000000, 48.000000)"
-                    >
-                      <rect id="矩形" x="0" y="0" width="24" height="24"></rect>
-                      <path
-                        d="M15,4 C16.1046,4 17,4.89543 17,6 L17,7 L18.5194,7 C19.1269,7 19.7016,7.27618 20.0811,7.75061 L21.5617,9.6014 C21.8454,9.956 22,10.3966 22,10.8508 L22,15 C22,16.1046 21.1046,17 20,17 L19,17 C19,18.6569 17.6569,20 16,20 C14.3431,20 13,18.6569 13,17 L10,17 C10,18.6569 8.65685,20 7,20 C5.34315,20 4,18.6569 4,17 C2.89543,17 2,16.1046 2,15 L2,6 C2,4.89543 2.89543,4 4,4 L15,4 Z M7,16 C6.44772,16 6,16.4477 6,17 C6,17.5523 6.44772,18 7,18 C7.55228,18 8,17.5523 8,17 C8,16.4477 7.55228,16 7,16 Z M16,16 C15.4477,16 15,16.4477 15,17 C15,17.5523 15.4477,18 16,18 C16.5523,18 17,17.5523 17,17 C17,16.4477 16.5523,16 16,16 Z M18.5194,9 L17,9 L17,13 L20,13 L20,10.8508 L18.5194,9 Z"
-                        id="形状"
-                      ></path>
-                    </g>
-                  </g>
-                </g>
-              </svg>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M1.66699 5C1.66699 3.61929 2.78628 2.5 4.16699 2.5H15.8337C17.2144 2.5 18.3337 3.61929 18.3337 5V13.3333C18.3337 14.7141 17.2144 15.8333 15.8337 15.8333H6.11143L3.33366 17.9167C2.64696 18.4317 1.66699 17.9417 1.66699 17.0833V5ZM5.83366 7.5C5.83366 7.03977 6.20676 6.66667 6.66699 6.66667H13.3337C13.7939 6.66667 14.167 7.03977 14.167 7.5C14.167 7.96023 13.7939 8.33333 13.3337 8.33333H6.66699C6.20676 8.33333 5.83366 7.96023 5.83366 7.5ZM6.66699 10C6.20676 10 5.83366 10.3731 5.83366 10.8333C5.83366 11.2936 6.20676 11.6667 6.66699 11.6667H9.16699C9.62724 11.6667 10.0003 11.2936 10.0003 10.8333C10.0003 10.3731 9.62724 10 9.16699 10H6.66699Z" fill="white" fill-opacity="0.5"/>
+            </svg>
+
             </div>
             <h6 className="mb-0 secondary_text d-none d-lg-block">
-              Vehichle Condition Monitoring
+              Orders
             </h6>
             </Link>
           </li>
-
           <li className="my-4 ">
-          <Link to="/frame4" className="link clickable d-flex clickable align-items-center justify-content-center justify-content-lg-start ">
+          <Link to="/profile/frame14"  className={`link d-flex clickable align-items-center justify-content-center justify-content-lg-start `}>
             <div className="me-lg-2 ">
-              <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-                <g
-                  id="页面-1"
-                  stroke="none"
-                  strokeWidth="1"
-                  fill="none"
-                  fillRule="evenodd"
-                >
-                  <g
-                    id="Contact"
-                    transform="translate(0.000000, -48.000000)"
-                    fillRule="nonzero"
-                  >
-                    <g
-                      id="chat_1_fill"
-                      transform="translate(0.000000, 48.000000)"
-                    >
-                      <rect id="矩形" x="0" y="0" width="24" height="24"></rect>
-                      <path
-                        d="M12,2 C17.5228,2 22,6.47715 22,12 C22,17.5228 17.5228,22 12,22 L4,22 C2.89543,22 2,21.1046 2,20 L2,12 C2,6.47715 6.47715,2 12,2 Z M12,14 L9,14 C8.44772,14 8,14.4477 8,15 C8,15.5523 8.44772,16 9,16 L12,16 C12.5523,16 13,15.5523 13,15 C13,14.4477 12.5523,14 12,14 Z M15,10 L9,10 C8.44772,10 8,10.4477 8,11 C8,11.51285 8.38604429,11.9355092 8.88337975,11.9932725 L9,12 L15,12 C15.5523,12 16,11.5523 16,11 C16,10.48715 15.613973,10.0644908 15.1166239,10.0067275 L15,10 Z"
-                        id="形状"
-                      ></path>
-                    </g>
-                  </g>
-                </g>
-              </svg>
+            <svg width='24px' height='24px' viewBox='0 0 24 24' version='1.1' >
+          <g id='页面-1' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
+            <g id='User' transform='translate(-240.000000, 0.000000)' fillRule='nonzero'>
+              <g id='user_4_line' transform='translate(240.000000, 0.000000)'>
+                <rect id='矩形' x='0' y='0' width='24' height='24'></rect>
+                <path d='M12,2 C17.5228,2 22,6.47715 22,12 C22,17.5228 17.5228,22 12,22 C6.47715,22 2,17.5228 2,12 C2,6.47715 6.47715,2 12,2 Z M12,16 C9.8009,16 7.85121,16.828 6.56532,17.8707 C7.9922,19.1922 9.90177,20 12,20 C14.0982,20 16.0078,19.1922 17.4347,17.8707 C16.1488,16.828 14.1991,16 12,16 Z M12,4 C7.58172,4 4,7.58172 4,12 C4,13.5996 4.46949,15.0896 5.27819,16.3396 C6.92692,14.9918 9.33471,14 12,14 C14.6653,14 17.0731,14.9918 18.7218,16.3396 C19.5305,15.0896 20,13.5996 20,12 C20,7.58172 16.4183,4 12,4 Z M12,5 C14.2091,5 16,6.79086 16,9 C16,11.2091 14.2091,13 12,13 C9.79086,13 8,11.2091 8,9 C8,6.79086 9.79086,5 12,5 Z M12,7 C10.8954,7 10,7.89543 10,9 C10,10.1046 10.8954,11 12,11 C13.1046,11 14,10.1046 14,9 C14,7.89543 13.1046,7 12,7 Z' id='形状'
+        fill='#FFF'></path></g></g></g></svg>
+
             </div>
             <h6 className="mb-0 secondary_text d-none d-lg-block">
-              Additional Requests
+              User Profile
             </h6>
             </Link>
           </li>
-
           <li className="my-4 ">
-          <Link to="/frame1" className="link clickable d-flex clickable align-items-center justify-content-center justify-content-lg-start ">
+          <Link to="/profile/frame15"  className={`link d-flex clickable align-items-center justify-content-center justify-content-lg-start `}>
             <div className="me-lg-2 ">
-              <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-                <g
-                  id="页面-1"
-                  stroke="none"
-                  strokeWidth="1"
-                  fill="none"
-                  fillRule="evenodd"
-                >
-                  <g
-                    id="Business"
-                    transform="translate(-144.000000, -48.000000)"
-                    fillRule="nonzero"
-                  >
-                    <g
-                      id="calendar_fill"
-                      transform="translate(144.000000, 48.000000)"
-                    >
-                      <rect id="矩形" x="0" y="0" width="24" height="24"></rect>
-                      <path
-                        d="M21,12 L21,19 C21,20.1046 20.1046,21 19,21 L5,21 C3.89543,21 3,20.1046 3,19 L3,12 L21,12 Z M16,3 C16.5523,3 17,3.44772 17,4 L17,5 L19,5 C20.1046,5 21,5.89543 21,7 L21,10 L3,10 L3,7 C3,5.89543 3.89543,5 5,5 L7,5 L7,4 C7,3.44772 7.44772,3 8,3 C8.55228,3 9,3.44772 9,4 L9,5 L15,5 L15,4 C15,3.44772 15.4477,3 16,3 Z"
-                        id="形状"
-                      ></path>
-                    </g>
-                  </g>
-                </g>
-              </svg>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M1.66699 5C1.66699 3.61929 2.78628 2.5 4.16699 2.5H15.8337C17.2144 2.5 18.3337 3.61929 18.3337 5V13.3333C18.3337 14.7141 17.2144 15.8333 15.8337 15.8333H6.11143L3.33366 17.9167C2.64696 18.4317 1.66699 17.9417 1.66699 17.0833V5ZM5.83366 7.5C5.83366 7.03977 6.20676 6.66667 6.66699 6.66667H13.3337C13.7939 6.66667 14.167 7.03977 14.167 7.5C14.167 7.96023 13.7939 8.33333 13.3337 8.33333H6.66699C6.20676 8.33333 5.83366 7.96023 5.83366 7.5ZM6.66699 10C6.20676 10 5.83366 10.3731 5.83366 10.8333C5.83366 11.2936 6.20676 11.6667 6.66699 11.6667H9.16699C9.62724 11.6667 10.0003 11.2936 10.0003 10.8333C10.0003 10.3731 9.62724 10 9.16699 10H6.66699Z" fill="white" fill-opacity="0.5"/>
+            </svg>
+
             </div>
             <h6 className="mb-0 secondary_text d-none d-lg-block">
-              View Time Table
+              Update Profile
             </h6>
             </Link>
           </li>
-        </ul>
+          <li className="my-4 ">
+          <Link to="/profile/frame14"  className={`link d-flex clickable align-items-center justify-content-center justify-content-lg-start `}>
+            <div className="me-lg-2 ">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M2.5 5C2.5 3.61929 3.61929 2.5 5 2.5H15C16.3807 2.5 17.5 3.61929 17.5 5V15C17.5 16.3807 16.3807 17.5 15 17.5H5C3.61929 17.5 2.5 16.3807 2.5 15V5ZM11.6667 11.6667C11.6667 11.2064 12.0398 10.8333 12.5 10.8333H15.8333V5C15.8333 4.53977 15.4602 4.16667 15 4.16667H5C4.53977 4.16667 4.16667 4.53977 4.16667 5V10.8333H7.5C7.96023 10.8333 8.33333 11.2064 8.33333 11.6667C8.33333 12.5872 9.0795 13.3333 10 13.3333C10.9205 13.3333 11.6667 12.5872 11.6667 11.6667Z" fill="white" fill-opacity="0.5"/>
+            </svg>
 
+            </div>
+            <h6 className="mb-0 secondary_text d-none d-lg-block">
+              Area Feedback
+            </h6>
+            </Link>
+          </li>
+
+
+          </ul>
 
       </div>
       </div>
 
       <div className="logout w-100 py-4 d-flex align-items-center justify-content-around p-2 px-3 bottom light_text ">
       <svg width='24px' height='24px' viewBox='0 0 24 24' version='1.1' >
-          <g id='页面-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'>
-            <g id='User' transform='translate(-240.000000, 0.000000)' fill-rule='nonzero'>
+          <g id='页面-1' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
+            <g id='User' transform='translate(-240.000000, 0.000000)' fillRule='nonzero'>
               <g id='user_4_line' transform='translate(240.000000, 0.000000)'>
                 <rect id='矩形' x='0' y='0' width='24' height='24'></rect>
                 <path d='M12,2 C17.5228,2 22,6.47715 22,12 C22,17.5228 17.5228,22 12,22 C6.47715,22 2,17.5228 2,12 C2,6.47715 6.47715,2 12,2 Z M12,16 C9.8009,16 7.85121,16.828 6.56532,17.8707 C7.9922,19.1922 9.90177,20 12,20 C14.0982,20 16.0078,19.1922 17.4347,17.8707 C16.1488,16.828 14.1991,16 12,16 Z M12,4 C7.58172,4 4,7.58172 4,12 C4,13.5996 4.46949,15.0896 5.27819,16.3396 C6.92692,14.9918 9.33471,14 12,14 C14.6653,14 17.0731,14.9918 18.7218,16.3396 C19.5305,15.0896 20,13.5996 20,12 C20,7.58172 16.4183,4 12,4 Z M12,5 C14.2091,5 16,6.79086 16,9 C16,11.2091 14.2091,13 12,13 C9.79086,13 8,11.2091 8,9 C8,6.79086 9.79086,5 12,5 Z M12,7 C10.8954,7 10,7.89543 10,9 C10,10.1046 10.8954,11 12,11 C13.1046,11 14,10.1046 14,9 C14,7.89543 13.1046,7 12,7 Z' id='形状'
@@ -364,4 +258,4 @@ function Sidebar() {
   );
 }
 
-export default Sidebar;
+export default Sidebar3;

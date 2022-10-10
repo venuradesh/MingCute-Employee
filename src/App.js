@@ -38,8 +38,8 @@ function App() {
               <Route path="frame11" element={<ViewStatus/>}/>
               <Route path="frame12" element={<CommonDash/>}/>
               <Route path="frame13" element={<SelectPlace/>}/>
-              <Route path="frame14" element={<CollectorProfile/>}/>
-              <Route path="frame15" element={<UpdateProfile/>}/>
+              <Route path="profile/frame14" element={<CollectorProfile/>}/>
+              <Route path="profile/frame15" element={<UpdateProfile/>}/>
             </Route>
       <Route path="/login" element={<Login/>} />
       </Routes>

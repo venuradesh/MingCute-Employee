@@ -1,6 +1,8 @@
 import React from "react";
 
+
 function AgrForm() {
+ 
   return (
     <div className="h-100  container-fluid">
       <div className="main_body payment_card">

@@ -1,30 +1,15 @@
 import React from "react";
 import logo from "../logo.svg";
-import { useLocation, Link, useNavigate } from "react-router-dom";
-function Sidebar() {
+import { useLocation, Link } from "react-router-dom";
+
+function Sidebar2() {
+  const location = useLocation();
+  console.log('pathname', location.pathnam);
   return (
     <div className="sidenav_body primary_bg  h-100">
       <div className="p-2 px-3">
-
-      
-      <div className="d-flex align-items-center justify-content-center">
-
-        {false && (
-        <div className="back text-start py-2 pb-3">
-          <svg width="52" height="12" viewBox="0 0 52 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="6" cy="6" r="6" fill="#FF6252"/>
-          <circle cx="6" cy="6" r="5.5" stroke="black" strokeOpacity="0.1"/>
-          <circle cx="26" cy="6" r="6" fill="#FDAD15"/>
-          <circle cx="26" cy="6" r="5.5" stroke="black" strokeOpacity="0.1"/>
-          <circle cx="46" cy="6" r="6" fill="#2AC670"/>
-          <circle cx="46" cy="6" r="5.5" stroke="black" strokeOpacity="0.1"/>
-          </svg>
-
-        </div>
-      )}
-      {true && (
-              <Link to="/frame1">
-        <div className="back text-center ms-4 clickable py-2 pb-3">
+      {false && (
+        <div className="back text-center py-2 pb-3">
           <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
             <g
               id="页面-1"
@@ -53,11 +38,20 @@ function Sidebar() {
             </g>
           </svg>
         </div>
-          </Link>
       )}
-        
-       </div>
+        {true && (
+        <div className="back text-start py-2 pb-3">
+          <svg width="52" height="12" viewBox="0 0 52 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="6" cy="6" r="6" fill="#FF6252"/>
+          <circle cx="6" cy="6" r="5.5" stroke="black" strokeOpacity="0.1"/>
+          <circle cx="26" cy="6" r="6" fill="#FDAD15"/>
+          <circle cx="26" cy="6" r="5.5" stroke="black" strokeOpacity="0.1"/>
+          <circle cx="46" cy="6" r="6" fill="#2AC670"/>
+          <circle cx="46" cy="6" r="5.5" stroke="black" strokeOpacity="0.1"/>
+          </svg>
 
+        </div>
+      )}
 
       <div className="brand_title mb-3 d-flex align-items-center justify-content-center">
         <svg className="mx-2" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" >
@@ -117,7 +111,8 @@ function Sidebar() {
       </div>
 
       <div className="side_body pb-4">
-      <Link to="/frame12" className="link clickable"> 
+        {
+         false  && 
         <div className="dash  my-3 d-flex align-items-end justify-content-center justify-content-lg-start">
           <div className="me-lg-2 ">
             <svg
@@ -155,15 +150,84 @@ function Sidebar() {
           </div>
           <h6 className="mb-0 secondary_text d-none d-lg-block">Dashboard</h6>
         </div>
-        </Link>
+}
 
-        <ul className="ps-0 ps-lg-4">
-          <li
-            className={`my-4 `}
+        <ul className="ps-0 ps-lg-4 ">
+        <li
+            className={`my-4`}
           >
-            <Link to="/frame9" className="link clickable d-flex clickable align-items-center justify-content-center justify-content-lg-start ">
+          <Link to="/frame1" className="d-flex link clickable align-items-center justify-content-center justify-content-lg-start"  aria-current="page">
             <div className="me-lg-2 ">
-              <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+            <svg
+              className=""
+              width="24px"
+              height="24px"
+              viewBox="0 0 24 24"
+              version="1.1"
+            >
+              <g
+                id="页面-1"
+                stroke="none"
+                strokeWidth="1"
+                fill="none"
+                fillRule="evenodd"
+              >
+                <g
+                  id="Building"
+                  transform="translate(-144.000000, -48.000000)"
+                  fillRule="nonzero"
+                >
+                  <g
+                    id="home_4_fill"
+                    transform="translate(144.000000, 48.000000)"
+                  >
+                    <rect id="矩形" x="0" y="0" width="24" height="24"></rect>
+                    <path
+                      d="M13.2,2.65 C12.4889,2.11667 11.5111,2.11667 10.8,2.65 L3.8,7.9 C3.29639,8.27771 3,8.87049 3,9.5 L3,19 C3,20.1046 3.89543,21 5,21 L8.9,21 C9.50751,21 10,20.5075 10,19.9 L10,15 C10,13.8954 10.8954,13 12,13 C13.1046,13 14,13.8954 14,15 L14,19.9 C14,20.5075 14.4925,21 15.1,21 L19,21 C20.1046,21 21,20.1046 21,19 L21,9.5 C21,8.87049 20.7036,8.27771 20.2,7.9 L13.2,2.65 Z"
+                      id="路径"
+                    ></path>
+                  </g>
+                </g>
+              </g>
+            </svg>
+            </div>
+            <h6 className="mb-0 secondary_text d-none d-lg-block">
+            Dashboard
+            </h6>
+            </Link>
+          </li>
+          <li
+            className={`my-4  `}
+          >
+            <Link to="/frame13" className="d-flex link clickable align-items-center justify-content-center justify-content-lg-start"  aria-current="page">
+            <div className="me-lg-2 ">
+              <svg width='24px' height='24px' viewBox='0 0 24 24' version='1.1'><g id='页面-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'>
+                <g id='Map' transform='translate(0.000000, -48.000000)' fill-rule='nonzero'><g id='location_fill' transform='translate(0.000000, 48.000000)'>
+                  <rect id='矩形' x='0' y='0' width='24' height='24'></rect><path d='M12,2 C16.9706,2 21,6.02944 21,11 C21,14.0738 19.3241,16.5892 17.5584,18.3945 C16.5896727,19.3848818 15.5596562,20.1973165 14.6817052,20.8113077 L14.2563896,21.1016714 C14.1879449,21.1472775 14.1208032,21.1914819 14.0550879,21.2342726 L13.6789009,21.4739579 L13.6789009,21.4739579 L13.3428744,21.6791459 L13.3428744,21.6791459 L12.9271,21.921 L12.9271,21.921 C12.3479,22.2481 11.6521,22.2481 11.0729,21.921 L10.6571257,21.6791459 L10.6571257,21.6791459 L10.1376557,21.3583918 C10.0749168,21.3184403 10.010628,21.2770633 9.94491277,21.2342726 L9.53449244,20.9606593 C8.61244219,20.3314866 7.49106273,19.4674136 6.44162,18.3945 C4.6759,16.5892 3,14.0738 3,11 C3,6.02944 7.02944,2 12,2 Z M12,8 C10.3431,8 9,9.34315 9,11 C9,12.6569 10.3431,14 12,14 C13.6569,14 15,12.6569 15,11 C15,9.34315 13.6569,8 12,8 Z' id='形状'
+               fill='#FFFFF'></path></g></g></g></svg>
+            </div>
+            <h6 className="mb-0 text-wrap secondary_text d-none d-lg-block">
+              City Map
+            </h6>
+            </Link>
+          </li>
+
+          <li className="my-4 d-flex link clickable align-items-center justify-content-center justify-content-lg-start">
+            <div className="me-lg-2 ">
+             
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5.83331 2.50008V3.33341C5.83331 4.25389 6.5795 5.00008 7.49998 5.00008H12.5C13.4205 5.00008 14.1666 4.25389 14.1666 3.33341V2.50008H15C15.9205 2.50008 16.6666 3.24627 16.6666 4.16675V13.3334C16.6666 16.0948 14.4281 18.3334 11.6666 18.3334H4.99998C4.0795 18.3334 3.33331 17.5872 3.33331 16.6667V4.16675C3.33331 3.24627 4.0795 2.50008 4.99998 2.50008H5.83331ZM9.99998 11.6667H7.49998C7.03975 11.6667 6.66665 12.0398 6.66665 12.5001C6.66665 12.9603 7.03975 13.3334 7.49998 13.3334H9.99998C10.4602 13.3334 10.8333 12.9603 10.8333 12.5001C10.8333 12.0398 10.4602 11.6667 9.99998 11.6667ZM12.5 8.33341H7.49998C7.03975 8.33341 6.66665 8.7065 6.66665 9.16675C6.66665 9.59412 6.98835 9.94634 7.4028 9.99448L7.49998 10.0001H12.5C12.9602 10.0001 13.3333 9.627 13.3333 9.16675C13.3333 8.7065 12.9602 8.33341 12.5 8.33341ZM11.6666 1.66675C12.1269 1.66675 12.5 2.03985 12.5 2.50008C12.5 2.92744 12.1783 3.27967 11.7638 3.32781L11.6666 3.33341H8.33331C7.87308 3.33341 7.49998 2.96031 7.49998 2.50008C7.49998 2.07272 7.82168 1.72049 8.23613 1.67235L8.33331 1.66675H11.6666Z" fill="white" fill-opacity="0.5"/>
+              </svg>
+            </div>
+            <h6 className="mb-0 text-wrap secondary_text d-none d-lg-block">
+              User Profile
+            </h6>
+          </li>
+
+          <li className="my-4 ">
+          <Link to="/frame1" className="d-flex link clickable align-items-center justify-content-center justify-content-lg-start"  aria-current="page">
+            <div className="me-lg-2 ">
+            <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
                 <g
                   id="页面-1"
                   stroke="none"
@@ -172,17 +236,17 @@ function Sidebar() {
                   fillRule="evenodd"
                 >
                   <g
-                    id="Weather"
-                    transform="translate(-576.000000, -48.000000)"
+                    id="Business"
+                    transform="translate(-144.000000, -48.000000)"
                     fillRule="nonzero"
                   >
                     <g
-                      id="sun_cloudy_fill"
-                      transform="translate(576.000000, 48.000000)"
+                      id="calendar_fill"
+                      transform="translate(144.000000, 48.000000)"
                     >
                       <rect id="矩形" x="0" y="0" width="24" height="24"></rect>
                       <path
-                        d="M11,6 C13.6623,6 15.9179,7.73309 16.7033,10.1322 C19.1625,10.6813 21,12.8756 21,15.5 C21,18.4635122 18.6562522,20.8795407 15.7212095,20.9956329 L15.5,21 L6.5,21 C4.01472,21 2,18.9853 2,16.5 C2,14.5384 3.2545,12.8708 5.00531,12.2544 C5.00178,12.17 5,12.0852 5,12 C5,8.68629 7.68629,6 11,6 Z M16.0001,3 C19.3138,3 22.0001,5.68629 22.0001,9 C22.0001,10.1679 21.6664,11.2578 21.0892,12.1797 C20.2816,10.8231 18.994,9.78544 17.4608,9.30094 C16.4667,6.92421 14.1994,5.21247 11.5115,5.0184 C12.6106,3.78022 14.2142,3 16.0001,3 Z"
+                        d="M21,12 L21,19 C21,20.1046 20.1046,21 19,21 L5,21 C3.89543,21 3,20.1046 3,19 L3,12 L21,12 Z M16,3 C16.5523,3 17,3.44772 17,4 L17,5 L19,5 C20.1046,5 21,5.89543 21,7 L21,10 L3,10 L3,7 C3,5.89543 3.89543,5 5,5 L7,5 L7,4 C7,3.44772 7.44772,3 8,3 C8.55228,3 9,3.44772 9,4 L9,5 L15,5 L15,4 C15,3.44772 15.4477,3 16,3 Z"
                         id="形状"
                       ></path>
                     </g>
@@ -190,86 +254,13 @@ function Sidebar() {
                 </g>
               </svg>
             </div>
-            <h6 className="mb-0 secondary_text d-none d-lg-block">
-              Weather Forcasting
+            <h6 className="mb-0 text-wrap secondary_text d-none d-lg-block">
+            View Schedule
             </h6>
             </Link>
           </li>
 
           <li className="my-4 d-flex clickable align-items-center justify-content-center justify-content-lg-start">
-          <Link to="/frame10" className="link clickable d-flex clickable align-items-center justify-content-center justify-content-lg-start ">
-            <div className="me-lg-2 ">
-              <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-                <g
-                  id="页面-1"
-                  stroke="none"
-                  strokeWidth="1"
-                  fill="none"
-                  fillRule="evenodd"
-                >
-                  <g
-                    id="File"
-                    transform="translate(0.000000, -336.000000)"
-                    fillRule="nonzero"
-                  >
-                    <g
-                      id="profile_fill"
-                      transform="translate(0.000000, 336.000000)"
-                    >
-                      <rect id="矩形" x="0" y="0" width="24" height="24"></rect>
-                      <path
-                        d="M20,3 C21.1046,3 22,3.89543 22,5 L22,19 C22,20.1046 21.1046,21 20,21 L4,21 C2.89543,21 2,20.1046 2,19 L2,5 C2,3.89543 2.89543,3 4,3 L20,3 Z M17,15 L7,15 C6.44772,15 6,15.4477 6,16 C6,16.5523 6.44772,17 7,17 L17,17 C17.5523,17 18,16.5523 18,16 C18,15.4477 17.5523,15 17,15 Z M10,7 L8,7 C6.94563773,7 6.08183483,7.81587733 6.00548573,8.85073759 L6,9 L6,11 C6,12.0543909 6.81587733,12.9181678 7.85073759,12.9945144 L8,13 L10,13 C11.0543909,13 11.9181678,12.18415 11.9945144,11.1492661 L12,11 L12,9 C12,7.94563773 11.18415,7.08183483 10.1492661,7.00548573 L10,7 Z M17,11 L14,11 C13.4477,11 13,11.4477 13,12 C13,12.51285 13.386027,12.9355092 13.8833761,12.9932725 L14,13 L17,13 C17.5523,13 18,12.5523 18,12 C18,11.48715 17.613973,11.0644908 17.1166239,11.0067275 L17,11 Z M10,9 L10,11 L8,11 L8,9 L10,9 Z M17,7 L14,7 C13.4477,7 13,7.44772 13,8 C13,8.55228 13.4477,9 14,9 L17,9 C17.5523,9 18,8.55228 18,8 C18,7.44772 17.5523,7 17,7 Z"
-                        id="形状"
-                      ></path>
-                    </g>
-                  </g>
-                </g>
-              </svg>
-            </div>
-            <h6 className="mb-0 secondary_text d-none d-lg-block">
-              Leave Management
-            </h6>
-            </Link>
-          </li>
-
-          <li className="my-4 ">
-          <Link to="/frame7" className="link clickable d-flex clickable align-items-center justify-content-center justify-content-lg-start ">
-            <div className="me-lg-2 ">
-              <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-                <g
-                  id="页面-1"
-                  stroke="none"
-                  strokeWidth="1"
-                  fill="none"
-                  fillRule="evenodd"
-                >
-                  <g
-                    id="Transport"
-                    transform="translate(0.000000, -48.000000)"
-                    fillRule="nonzero"
-                  >
-                    <g
-                      id="truck_fill"
-                      transform="translate(0.000000, 48.000000)"
-                    >
-                      <rect id="矩形" x="0" y="0" width="24" height="24"></rect>
-                      <path
-                        d="M15,4 C16.1046,4 17,4.89543 17,6 L17,7 L18.5194,7 C19.1269,7 19.7016,7.27618 20.0811,7.75061 L21.5617,9.6014 C21.8454,9.956 22,10.3966 22,10.8508 L22,15 C22,16.1046 21.1046,17 20,17 L19,17 C19,18.6569 17.6569,20 16,20 C14.3431,20 13,18.6569 13,17 L10,17 C10,18.6569 8.65685,20 7,20 C5.34315,20 4,18.6569 4,17 C2.89543,17 2,16.1046 2,15 L2,6 C2,4.89543 2.89543,4 4,4 L15,4 Z M7,16 C6.44772,16 6,16.4477 6,17 C6,17.5523 6.44772,18 7,18 C7.55228,18 8,17.5523 8,17 C8,16.4477 7.55228,16 7,16 Z M16,16 C15.4477,16 15,16.4477 15,17 C15,17.5523 15.4477,18 16,18 C16.5523,18 17,17.5523 17,17 C17,16.4477 16.5523,16 16,16 Z M18.5194,9 L17,9 L17,13 L20,13 L20,10.8508 L18.5194,9 Z"
-                        id="形状"
-                      ></path>
-                    </g>
-                  </g>
-                </g>
-              </svg>
-            </div>
-            <h6 className="mb-0 secondary_text d-none d-lg-block">
-              Vehichle Condition Monitoring
-            </h6>
-            </Link>
-          </li>
-
-          <li className="my-4 ">
-          <Link to="/frame4" className="link clickable d-flex clickable align-items-center justify-content-center justify-content-lg-start ">
             <div className="me-lg-2 ">
               <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
                 <g
@@ -298,16 +289,14 @@ function Sidebar() {
                 </g>
               </svg>
             </div>
-            <h6 className="mb-0 secondary_text d-none d-lg-block">
-              Additional Requests
+            <h6 className="mb-0 text-wrap secondary_text d-none d-lg-block">
+            Request Leave
             </h6>
-            </Link>
           </li>
 
-          <li className="my-4 ">
-          <Link to="/frame1" className="link clickable d-flex clickable align-items-center justify-content-center justify-content-lg-start ">
+          <li className="my-4 d-flex clickable align-items-center justify-content-center justify-content-lg-start">
             <div className="me-lg-2 ">
-              <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+               <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
                 <g
                   id="页面-1"
                   stroke="none"
@@ -316,17 +305,17 @@ function Sidebar() {
                   fillRule="evenodd"
                 >
                   <g
-                    id="Business"
-                    transform="translate(-144.000000, -48.000000)"
+                    id="File"
+                    transform="translate(0.000000, -336.000000)"
                     fillRule="nonzero"
                   >
                     <g
-                      id="calendar_fill"
-                      transform="translate(144.000000, 48.000000)"
+                      id="profile_fill"
+                      transform="translate(0.000000, 336.000000)"
                     >
                       <rect id="矩形" x="0" y="0" width="24" height="24"></rect>
                       <path
-                        d="M21,12 L21,19 C21,20.1046 20.1046,21 19,21 L5,21 C3.89543,21 3,20.1046 3,19 L3,12 L21,12 Z M16,3 C16.5523,3 17,3.44772 17,4 L17,5 L19,5 C20.1046,5 21,5.89543 21,7 L21,10 L3,10 L3,7 C3,5.89543 3.89543,5 5,5 L7,5 L7,4 C7,3.44772 7.44772,3 8,3 C8.55228,3 9,3.44772 9,4 L9,5 L15,5 L15,4 C15,3.44772 15.4477,3 16,3 Z"
+                        d="M20,3 C21.1046,3 22,3.89543 22,5 L22,19 C22,20.1046 21.1046,21 20,21 L4,21 C2.89543,21 2,20.1046 2,19 L2,5 C2,3.89543 2.89543,3 4,3 L20,3 Z M17,15 L7,15 C6.44772,15 6,15.4477 6,16 C6,16.5523 6.44772,17 7,17 L17,17 C17.5523,17 18,16.5523 18,16 C18,15.4477 17.5523,15 17,15 Z M10,7 L8,7 C6.94563773,7 6.08183483,7.81587733 6.00548573,8.85073759 L6,9 L6,11 C6,12.0543909 6.81587733,12.9181678 7.85073759,12.9945144 L8,13 L10,13 C11.0543909,13 11.9181678,12.18415 11.9945144,11.1492661 L12,11 L12,9 C12,7.94563773 11.18415,7.08183483 10.1492661,7.00548573 L10,7 Z M17,11 L14,11 C13.4477,11 13,11.4477 13,12 C13,12.51285 13.386027,12.9355092 13.8833761,12.9932725 L14,13 L17,13 C17.5523,13 18,12.5523 18,12 C18,11.48715 17.613973,11.0644908 17.1166239,11.0067275 L17,11 Z M10,9 L10,11 L8,11 L8,9 L10,9 Z M17,7 L14,7 C13.4477,7 13,7.44772 13,8 C13,8.55228 13.4477,9 14,9 L17,9 C17.5523,9 18,8.55228 18,8 C18,7.44772 17.5523,7 17,7 Z"
                         id="形状"
                       ></path>
                     </g>
@@ -334,10 +323,9 @@ function Sidebar() {
                 </g>
               </svg>
             </div>
-            <h6 className="mb-0 secondary_text d-none d-lg-block">
-              View Time Table
+            <h6 className="mb-0 text-wrap secondary_text d-none d-lg-block">
+            Vehicle Condition Monitoring
             </h6>
-            </Link>
           </li>
         </ul>
 
@@ -347,8 +335,8 @@ function Sidebar() {
 
       <div className="logout w-100 py-4 d-flex align-items-center justify-content-around p-2 px-3 bottom light_text ">
       <svg width='24px' height='24px' viewBox='0 0 24 24' version='1.1' >
-          <g id='页面-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'>
-            <g id='User' transform='translate(-240.000000, 0.000000)' fill-rule='nonzero'>
+          <g id='页面-1' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
+            <g id='User' transform='translate(-240.000000, 0.000000)' fillRule='nonzero'>
               <g id='user_4_line' transform='translate(240.000000, 0.000000)'>
                 <rect id='矩形' x='0' y='0' width='24' height='24'></rect>
                 <path d='M12,2 C17.5228,2 22,6.47715 22,12 C22,17.5228 17.5228,22 12,22 C6.47715,22 2,17.5228 2,12 C2,6.47715 6.47715,2 12,2 Z M12,16 C9.8009,16 7.85121,16.828 6.56532,17.8707 C7.9922,19.1922 9.90177,20 12,20 C14.0982,20 16.0078,19.1922 17.4347,17.8707 C16.1488,16.828 14.1991,16 12,16 Z M12,4 C7.58172,4 4,7.58172 4,12 C4,13.5996 4.46949,15.0896 5.27819,16.3396 C6.92692,14.9918 9.33471,14 12,14 C14.6653,14 17.0731,14.9918 18.7218,16.3396 C19.5305,15.0896 20,13.5996 20,12 C20,7.58172 16.4183,4 12,4 Z M12,5 C14.2091,5 16,6.79086 16,9 C16,11.2091 14.2091,13 12,13 C9.79086,13 8,11.2091 8,9 C8,6.79086 9.79086,5 12,5 Z M12,7 C10.8954,7 10,7.89543 10,9 C10,10.1046 10.8954,11 12,11 C13.1046,11 14,10.1046 14,9 C14,7.89543 13.1046,7 12,7 Z' id='形状'
@@ -364,4 +352,4 @@ function Sidebar() {
   );
 }
 
-export default Sidebar;
+export default Sidebar2;
