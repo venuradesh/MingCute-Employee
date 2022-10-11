@@ -170,6 +170,7 @@ function Sidebar3() {
             </svg>
 
             </div>
+            
             <h6 className="mb-0 secondary_text d-none d-lg-block">
             Dashboard
             </h6>
