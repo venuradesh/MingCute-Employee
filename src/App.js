@@ -18,8 +18,11 @@ import SelectPlace from './components/SelectPlace'
 import CollectorProfile from './components/Collector_profile'
 import UpdateProfile from './components/UpdateProfile'
 import Login from './pages/Login';
+import VsEvent from './components/Vs-event';
+import VsAdditonal from './components/Vs-additional';
 
 function App() {
+  
   return (
     <div className="App h-100">
       <Routes>
@@ -32,6 +35,8 @@ function App() {
               <Route path="frame5" element={<Agr2 />}/>
               <Route path="frame6" element={<AgrForm/>}/>
               <Route path="frame7" element={<Vcm02/>}/>
+              <Route path="frameevent" element={<VsEvent/>}/>
+              <Route path="frameaditional" element={<VsAdditonal/>}/>
               <Route path="frame8" element={<Vcm03/>}/>
               <Route path="frame9" element={<WeatherForacst/>}/>
               <Route path="frame10" element={<Leave/>}/>

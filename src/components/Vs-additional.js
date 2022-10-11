@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 const table_array = [1, 2, 3, 4, 5, 6, 7, 8]
 
-function Vs01() {
+function VsAdditonal() {
   const navigate = useNavigate();
 
   function viewSummary() {
@@ -15,7 +15,7 @@ function Vs01() {
   }
   const [data, setData] = useState([])
   useEffect(() => {
-    axios.get('https://cb65-123-231-61-157.in.ngrok.io/truck')
+    axios.get('https://cb65-123-231-61-157.in.ngrok.io/get-Additional-Carbaage-Collector-data')
       .then(function (response) {
         setData(response.data)
         console.log(response);
@@ -26,14 +26,9 @@ function Vs01() {
       <div className="main_body">
         <div className="card_body shedule_table container mt-5">
           <div className="top w-100 ">
-            <p>
-            <a href='http://localhost:3000/frame2'>Truck</a> 
-            <span>, </span>
-            <a href='http://localhost:3000/frameevent'>Event</a> 
-            <span>, </span>
-            <a href='http://localhost:3000/frameaditional'> Additional Collections</a>
-            <span>, </span>
-            </p>
+            <button >truck</button>
+            <button>event</button>
+            <button>event</button>
           </div>
           <div>
             <div className="mt-3 schedules d-flex align-items-center justify-content-between ">
@@ -48,32 +43,23 @@ function Vs01() {
               <table className="table">
                 <thead className="table-dark">
                   <tr>
-                    <th>Time</th>
-                    <th>Monday</th>
-                    <th>Tuesday</th>
-                    <th>Wednesday</th>
-                    <th>Thursday</th>
-                    <th>Friday</th>
-                    <th>Saturday</th>
-                    <th>Sunnday</th>
+                    <th>ID</th>
+                    <th>Address</th>
+                    <th>Garbage Type</th>
+                    <th>Quantity</th>
+                    <th>Request Date</th>
+                    <th>Additional information</th>
                   </tr>
                 </thead>
                 <tbody>
-
                   { data.length > 0 && data.map((cont, index) => (
                       <tr key={index} >
-                        
-
-                          <td>{cont.start_time} </td>
-                          <td>{cont.truck_id} </td>
-                          <td>{cont.truck_id} </td>
-                          <td>{cont.truck_id} </td>
-                          <td>{cont.truck_id} </td>
-                          <td>{cont.truck_id} </td>
-                          <td>{cont.truck_id} </td>
-                          <td>{cont.truck_id} </td>
-                          
-                        
+                          <td>{cont.id} </td>
+                          <td>{cont.Addresss} </td>
+                          <td>{cont.Carbage_type} </td>
+                          <td>{cont.Quantity} </td>
+                          <td>{cont.Request_date} </td>
+                          <td>{cont.Additional_information} </td>
                       </tr>
                     ))
                   }
@@ -87,4 +73,4 @@ function Vs01() {
   )
 }
 
-export default Vs01
+export default VsAdditonal
