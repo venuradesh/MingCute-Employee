@@ -13,14 +13,36 @@ function VsAdditonal() {
   function viewSchedule() {
     navigate("/frame2");
   }
-  const [data, setData] = useState([])
-  useEffect(() => {
-    axios.get('https://cb65-123-231-61-157.in.ngrok.io/get-Additional-Carbaage-Collector-data')
-      .then(function (response) {
-        setData(response.data)
-        console.log(response);
-      })
-  })
+  // const [data, setData] = useState([])
+
+
+  const data = [
+    {
+      Addresss: "jaffna", 
+      Carbage_type: "paper", 
+      Quantity: "2kg", 
+      Request_date: "2022/11/01", 
+      TruckId: "FN-48YG"
+    }, 
+    {
+      Addresss: "jaffna", 
+      Carbage_type: "paper", 
+      Quantity: "2kg", 
+      Request_date: "2022/11/01", 
+      TruckId: "WE-75DF"
+    }
+  ]
+
+
+  // useEffect(() => {
+  //   axios.get('https://57b8-112-134-221-151.ap.ngrok.io/getCarbageTable')
+  //     .then(function (response) {
+  //       setData(response.data)
+  //       console.log(response);
+  //     })
+  // }, [])
+
+
   return (
     <div className="h-100   container-fluid">
       <div className="main_body">
@@ -43,25 +65,21 @@ function VsAdditonal() {
               <table className="table">
                 <thead className="table-dark">
                   <tr>
-                    <th>ID</th>
                     <th>Truck ID</th>
                     <th>Address</th>
                     <th>Garbage Type</th>
                     <th>Quantity</th>
                     <th>Request Date</th>
-                    <th>Additional information</th>
                   </tr>
                 </thead>
                 <tbody>
                   { data.length > 0 && data.map((cont, index) => (
                       <tr key={index} >
-                          <td>{cont.id} </td>
-                          <td>{cont.Truck_id} </td>
+                          <td>{cont.TruckId} </td>
                           <td>{cont.Addresss} </td>
                           <td>{cont.Carbage_type} </td>
                           <td>{cont.Quantity} </td>
                           <td>{cont.Request_date} </td>
-                          <td>{cont.Additional_information} </td>
                       </tr>
                     ))
                   }

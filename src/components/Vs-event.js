@@ -13,16 +13,37 @@ function VsEvent() {
   function viewSchedule() {
     navigate("/frame2");
   }
-  const [data, setData] = useState([])
+  // const [data, setData] = useState([])
 
-  useEffect(() => {
-    axios.get('https://f5bc-112-134-222-178.ap.ngrok.io/time-table/event/truck')
-      .then(function (response) {
-        setData(response.data)
-        console.log(response);
-        console.log("response");
-      })
-  } , [])
+  const data = [
+    {
+        Event_Date : "Monday, 31 October 2022 ",
+        Event_Name: "International Congress on Economy, Finance, and Business (ICEFB)",
+        Location: "National Library Auditorium.Colombo",
+        Tuck_Number: "SM-37MS"
+    },
+    {
+        Event_Date : "Thursday, 3 November 2022 ",
+        Event_Name: "World Conference on Accountants (WCA)",
+        Location: " Sri Lanka Exhibition & Convention Centre.Colombo",
+        Tuck_Number: "FI-67YU"
+    },
+    {
+        Event_Date : "Saturday , 5 November 2022 ",
+        Event_Name: "International Conference on Recycling and Waste Management (ICRWM)",
+        Location: " Ruby Hall.Colombo",
+        Tuck_Number: "FO-77UI"
+    }
+]
+
+  // useEffect(() => {
+  //   axios.get('https://f5bc-112-134-222-178.ap.ngrok.io/time-table/event/truck')
+  //     .then(function (response) {
+  //       setData(response.data)
+  //       console.log(response);
+  //       console.log("response");
+  //     })
+  // } , [])
 
   console.log("data");
   console.log(data);
@@ -54,10 +75,10 @@ function VsEvent() {
 
                   {data.length > 0 && data.map((cont, index) => (
                     <tr key={index} >
-                      <td>{cont.truck_id} </td>
-                      <td>{cont.date} </td>
-                      <td>{cont.event} </td>
-                      <td>{cont.location} </td>
+                      <td>{cont.Tuck_Number} </td>
+                      <td>{cont.Event_Date} </td>
+                      <td>{cont.Event_Name} </td>
+                      <td>{cont.Location} </td>
                     </tr>
                   ))
                   }
