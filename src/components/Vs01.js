@@ -25,7 +25,7 @@ function Vs01() {
     <div className="h-100   container-fluid">
       <div className="main_body">
         <div className="card_body shedule_table container mt-5">
-          <div className="top w-100 ">
+          {/* <div className="top w-100 ">
             <p>
             <a href='http://localhost:3000/frame2'>Truck</a> 
             <span>, </span>
@@ -34,7 +34,7 @@ function Vs01() {
             <a href='http://localhost:3000/frameaditional'> Additional Collections</a>
             <span>, </span>
             </p>
-          </div>
+          </div> */}
           <div>
             <div className="mt-3 schedules d-flex align-items-center justify-content-between ">
               <div onClick={viewSchedule} className="schedule clickable h6 mb-0 py-2 title_tab text-center">

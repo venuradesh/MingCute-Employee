@@ -394,3 +394,11 @@ li:hover h6{
   color: #61dafb;
 }
 
+.event-btn-place{
+  margin-top: 200px;
+  margin-left: 280px;
+}
+
+.ml-16{
+  margin-left: 16px;
+}

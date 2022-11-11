@@ -14,22 +14,23 @@ function VsEvent() {
     navigate("/frame2");
   }
   const [data, setData] = useState([])
+
   useEffect(() => {
-    axios.get('https://cb65-123-231-61-157.in.ngrok.io/get-event-data')
+    axios.get('https://f5bc-112-134-222-178.ap.ngrok.io/time-table/event/truck')
       .then(function (response) {
         setData(response.data)
         console.log(response);
+        console.log("response");
       })
-  })
+  } , [])
+
+  console.log("data");
+  console.log(data);
+
   return (
     <div className="h-100   container-fluid">
       <div className="main_body">
         <div className="card_body shedule_table container mt-5">
-          <div className="top w-100 ">
-            <button >truck</button>
-            <button>event</button>
-            <button>event</button>
-          </div>
           <div>
             <div className="mt-3 schedules d-flex align-items-center justify-content-between ">
               <div onClick={viewSchedule} className="schedule clickable h6 mb-0 py-2 title_tab text-center">
@@ -43,25 +44,22 @@ function VsEvent() {
               <table className="table">
                 <thead className="table-dark">
                   <tr>
+                    <th>Truck ID</th>
                     <th>Date</th>
                     <th>Event</th>
                     <th>Location</th>
-               
                   </tr>
                 </thead>
                 <tbody>
 
-                  { data.length > 0 && data.map((cont, index) => (
-                      <tr key={index} >
-                        
-
-                          <td>{cont.date} </td>
-                          <td>{cont.event} </td>
-                          <td>{cont.location} </td>
-                          
-                        
-                      </tr>
-                    ))
+                  {data.length > 0 && data.map((cont, index) => (
+                    <tr key={index} >
+                      <td>{cont.truck_id} </td>
+                      <td>{cont.date} </td>
+                      <td>{cont.event} </td>
+                      <td>{cont.location} </td>
+                    </tr>
+                  ))
                   }
                 </tbody>
               </table>

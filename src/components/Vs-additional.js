@@ -25,11 +25,11 @@ function VsAdditonal() {
     <div className="h-100   container-fluid">
       <div className="main_body">
         <div className="card_body shedule_table container mt-5">
-          <div className="top w-100 ">
+          {/* <div className="top w-100 ">
             <button >truck</button>
             <button>event</button>
             <button>event</button>
-          </div>
+          </div> */}
           <div>
             <div className="mt-3 schedules d-flex align-items-center justify-content-between ">
               <div onClick={viewSchedule} className="schedule clickable h6 mb-0 py-2 title_tab text-center">
@@ -44,6 +44,7 @@ function VsAdditonal() {
                 <thead className="table-dark">
                   <tr>
                     <th>ID</th>
+                    <th>Truck ID</th>
                     <th>Address</th>
                     <th>Garbage Type</th>
                     <th>Quantity</th>
@@ -55,6 +56,7 @@ function VsAdditonal() {
                   { data.length > 0 && data.map((cont, index) => (
                       <tr key={index} >
                           <td>{cont.id} </td>
+                          <td>{cont.Truck_id} </td>
                           <td>{cont.Addresss} </td>
                           <td>{cont.Carbage_type} </td>
                           <td>{cont.Quantity} </td>

@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 function Vcm01() {
   const navigate = useNavigate();
-  
+
   function viewSchedule() {
     navigate("/frame2");
   }
@@ -11,38 +11,42 @@ function Vcm01() {
     <div className="h-100  container-fluid">
       <div className="main_body">
         <div className="card_body container mt-5">
-            <div className="container ">
-              <div className="card big_card  shadow mx-auto text-center">
-                <h5 className="my-5">Municipal Wards :</h5>
-                <div className="container mt-3">
-                  <div className="row">
-                    <div className="col-4 py-4 text-center d-flex align-items-center justify-content-center">
-                      <button onClick={viewSchedule} className="place_btn h6 py-1"> Dematagoda</button>
-                    </div>
-                    <div className="col-4 py-4 text-center d-flex align-items-center justify-content-center"></div>
-                    <div className="col-4 py-4 text-center d-flex align-items-center justify-content-center">
-                      <button onClick={viewSchedule} className="place_btn h6 py-1"> Dematagoda</button>
-                    </div>
-                    <div className="col-4 py-4 text-center d-flex a;ign-items-center justify-content-center">
-                      <button onClick={viewSchedule} className="place_btn h6 py-1"> Dematagoda</button>
-                    </div>
-                    <div className="col-4 py-4 text-center d-flex a;ign-items-center justify-content-center">
-                      <button onClick={viewSchedule} className="place_btn h6 py-1"> Dematagoda</button>
-                    </div>
-                    <div className="col-4 py-4 text-center d-flex a;ign-items-center justify-content-center">
-                      <button onClick={viewSchedule} className="place_btn h6 py-1"> Dematagoda</button>
-                    </div>
-                    <div className="col-4 py-4 text-center d-flex a;ign-items-center justify-content-center">
-                      <button onClick={viewSchedule} className="place_btn h6 py-1"> Dematagoda</button>
-                    </div>
-                    <div className="col-4 py-4 text-center d-flex a;ign-items-center justify-content-center"></div>
-                    <div className="col-4 py-4 text-center d-flex a;ign-items-center justify-content-center">
-                      <button onClick={viewSchedule} className="place_btn h6 py-1"> Dematagoda</button>
-                    </div>
+          <div className="container ">
+            <div className="card big_card  shadow mx-auto text-center">
+              <h5 className="my-5">{`Municipal Wards :`}</h5>
+              <div className="container mt-3">
+                <div className="row">
+                  <div className="col-4 py-4 text-center d-flex align-items-center justify-content-center">
+                    <button onClick={viewSchedule} className="place_btn h6 py-1"> {`Dematagoda`}</button>
+                  </div>
+                  <div className="col-4 py-4 text-center d-flex align-items-center justify-content-center"></div>
+                  <div className="col-4 py-4 text-center d-flex align-items-center justify-content-center">
+                    <button onClick={viewSchedule} className="place_btn h6 py-1"> {`Wanathamulla`}</button>
+                  </div>
+                  <div className="col-4 py-4 text-center d-flex a;ign-items-center justify-content-center">
+                    <button onClick={viewSchedule} className="place_btn h6 py-1"> {`Kuppiyawatte East`}</button>
+                  </div>
+                  <div className="col-4 py-4 text-center d-flex a;ign-items-center justify-content-center">
+                    <button onClick={viewSchedule} className="place_btn h6 py-1"> {`Kuppiyawatte West`}</button>
+                  </div>
+                  <div className="col-4 py-4 text-center d-flex a;ign-items-center justify-content-center">
+                    <button onClick={viewSchedule} className="place_btn h6 py-1"> {`Cinnoman Garden`}</button>
+                  </div>
+                  <div className="col-4 py-4 text-center d-flex a;ign-items-center justify-content-center">
+                    <button onClick={viewSchedule} className="place_btn h6 py-1"> {`Borella South`}</button>
+                  </div>
+                  <div className="col-4 py-4 text-center d-flex a;ign-items-center justify-content-center"></div>
+                  <div className="col-4 py-4 text-center d-flex a;ign-items-center justify-content-center">
+                    <button onClick={viewSchedule} className="place_btn h6 py-1"> {`Borella North`}</button>
                   </div>
                 </div>
               </div>
+              <div className="top w-100 event-btn-place">
+                <a href='http://localhost:3000/frameevent'><button className="place_btn ml-16 h6 py-1">events</button></a>
+                <a href='http://localhost:3000/frameaditional'> <button className="place_btn ml-16 h6 py-1">Additional Garbage Request</button></a>
+              </div>
             </div>
+          </div>
         </div>
       </div>
     </div>
