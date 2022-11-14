@@ -5,14 +5,15 @@ import { Doughnut } from 'react-chartjs-2';
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 export const data = {
-    labels: ['Red', 'Blue'],
+    labels: ['Red', 'Blue', 'yellow'],
     datasets: [
       {
         label: '# of Votes',
-        data: [12, 19],
+        data: [12, 19 ,11],
         backgroundColor: [
           'red',
           'green',
+          'yellow'
         ],
         borderColor: [
           "transparent"
@@ -30,7 +31,7 @@ function CollectorProfile() {
                 <div className='col-sm-4 d-flex align-items-center justify-content-center'>
                     <lable for="profImg" className="imgdiv">
                     {/* <div className="imgdiv"> */}
-                    <img className='default_img' width="150" height="150" src="/profile/user_default.png" alt="user"/>
+                    <img className='default_img' width="150" height="150" src="/profile/user.svg" alt="user"/>
                     <img className='update_img'  src="/profile/dashicons_update.png" alt="user"/>
                     {/* </div> */}
                     </lable>
@@ -43,17 +44,12 @@ function CollectorProfile() {
                     </div>
                 </div>
             </div>
-            <div className='detail_user my-4 px-5'>
-                <p className='mb-2'>701254666V</p>
-                <p className='mb-2'>No 45, Negambo Rowad,Welisara</p>
-                <p className='mb-2'>077-1254666</p>
-                <p className='mb-2'>rehan@gmail.com</p>
-            </div>
+            
             <div className='card_user card border-0 mx-2 p-4'>
             <div className='row'>
-                <div className='col-6 pb-3'>Working Devision :  </div>
+                <div className='col-6 pb-3'>Main Area :  </div>
                 <div className='col-6 pb-3'>Dematagoda</div>
-                    <div className='col-6'>Working Locations :</div>
+                    <div className='col-6'>Working Lanes :</div>
                     <div className='col-6'>Aramya Place(L001)
                         Seelarathna Lane(L002)
                         Aramya Road(L003)
