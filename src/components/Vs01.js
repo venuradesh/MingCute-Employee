@@ -1,11 +1,14 @@
-import axios from 'axios';
-import React, { useEffect, useState } from 'react'
-import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 
-const table_array = [1, 2, 3, 4, 5, 6, 7, 8]
+const table_array = [1, 2, 3, 4, 5, 6, 7, 8];
 
 function Vs01() {
   const navigate = useNavigate();
+  const location = useLocation();
+  const [table_array, setTableArray] = useState([]);
+  const API_URL = `http://localhost:5000/table/random/${location.state.place.charAt(0).toUpperCase() + location.state.place.slice(1)}`;
 
   function viewSummary() {
     navigate("/frame3");
@@ -13,14 +16,19 @@ function Vs01() {
   function viewSchedule() {
     navigate("/frame2");
   }
-  const [data, setData] = useState([])
+  const [data, setData] = useState([]);
+
   useEffect(() => {
-    axios.get('https://cb65-123-231-61-157.in.ngrok.io/truck')
-      .then(function (response) {
-        setData(response.data)
-        console.log(response);
+    console.log(location.state.place);
+    axios
+      .get(API_URL)
+      .then((response) => {
+        setTableArray(response.data);
       })
-  })
+      .catch((err) => {
+        console.log(err);
+      });
+  });
   return (
     <div className="h-100   container-fluid">
       <div className="main_body">
@@ -59,24 +67,23 @@ function Vs01() {
                   </tr>
                 </thead>
                 <tbody>
-
-                  { data.length > 0 && data.map((cont, index) => (
-                      <tr key={index} >
-                        
-
-                          <td>{cont.start_time} </td>
-                          <td>{cont.truck_id} </td>
-                          <td>{cont.truck_id} </td>
-                          <td>{cont.truck_id} </td>
-                          <td>{cont.truck_id} </td>
-                          <td>{cont.truck_id} </td>
-                          <td>{cont.truck_id} </td>
-                          <td>{cont.truck_id} </td>
-                          
-                        
-                      </tr>
-                    ))
-                  }
+                  {table_array.map((cont, index) => (
+                    <tr key={index}>
+                      <td>{Object.keys(cont)[0]}</td>
+                      {cont[Object.keys(cont)[0]].map((datas, key) => (
+                        <td key={key}>
+                          {datas.map((data) => (
+                            <p>
+                              {`${data["Tuck Number"]}, ${data["Driver's Name"]}`}
+                              <br /> {`Road - ${data["Road"]}`}
+                              <br />
+                              {`Emp - ${data["Employee Name"]}`}
+                            </p>
+                          ))}
+                        </td>
+                      ))}
+                    </tr>
+                  ))}
                 </tbody>
               </table>
             </div>
@@ -84,7 +91,7 @@ function Vs01() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default Vs01
+export default Vs01;

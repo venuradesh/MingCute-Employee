@@ -4,8 +4,8 @@ import { useNavigate } from "react-router-dom";
 function Vcm01() {
   const navigate = useNavigate();
 
-  function viewSchedule() {
-    navigate("/frame2");
+  function viewSchedule(data) {
+    navigate("/frame2", { state: { place: data } });
   }
   return (
     <div className="h-100  container-fluid">
@@ -17,33 +17,59 @@ function Vcm01() {
               <div className="container mt-3">
                 <div className="row">
                   <div className="col-4 py-4 text-center d-flex align-items-center justify-content-center">
-                    <button onClick={viewSchedule} className="place_btn h6 py-1"> {`Dematagoda`}</button>
+                    <button onClick={() => viewSchedule("dematagoda")} className="place_btn h6 py-1">
+                      {" "}
+                      {`Dematagoda`}
+                    </button>
                   </div>
                   <div className="col-4 py-4 text-center d-flex align-items-center justify-content-center"></div>
                   <div className="col-4 py-4 text-center d-flex align-items-center justify-content-center">
-                    <button onClick={viewSchedule} className="place_btn h6 py-1"> {`Wanathamulla`}</button>
+                    <button onClick={() => viewSchedule("wanathamulla")} className="place_btn h6 py-1">
+                      {" "}
+                      {`Wanathamulla`}
+                    </button>
                   </div>
                   <div className="col-4 py-4 text-center d-flex a;ign-items-center justify-content-center">
-                    <button onClick={viewSchedule} className="place_btn h6 py-1"> {`Kuppiyawatte East`}</button>
+                    <button onClick={() => viewSchedule("Kuppiyawatte%20-%20EAST")} className="place_btn h6 py-1">
+                      {" "}
+                      {`Kuppiyawatte East`}
+                    </button>
                   </div>
                   <div className="col-4 py-4 text-center d-flex a;ign-items-center justify-content-center">
-                    <button onClick={viewSchedule} className="place_btn h6 py-1"> {`Kuppiyawatte West`}</button>
+                    <button onClick={() => viewSchedule("Kuppiyawaththe%20-%20West")} className="place_btn h6 py-1">
+                      {" "}
+                      {`Kuppiyawatte West`}
+                    </button>
                   </div>
                   <div className="col-4 py-4 text-center d-flex a;ign-items-center justify-content-center">
-                    <button onClick={viewSchedule} className="place_btn h6 py-1"> {`Cinnoman Garden`}</button>
+                    <button onClick={() => viewSchedule("Greenpath")} className="place_btn h6 py-1">
+                      {" "}
+                      {`Cinnoman Garden`}
+                    </button>
                   </div>
                   <div className="col-4 py-4 text-center d-flex a;ign-items-center justify-content-center">
-                    <button onClick={viewSchedule} className="place_btn h6 py-1"> {`Borella South`}</button>
+                    <button onClick={() => viewSchedule("Borella%20South")} className="place_btn h6 py-1">
+                      {" "}
+                      {`Borella South`}
+                    </button>
                   </div>
                   <div className="col-4 py-4 text-center d-flex a;ign-items-center justify-content-center"></div>
                   <div className="col-4 py-4 text-center d-flex a;ign-items-center justify-content-center">
-                    <button onClick={viewSchedule} className="place_btn h6 py-1"> {`Borella North`}</button>
+                    <button onClick={() => viewSchedule("Borella%20North")} className="place_btn h6 py-1">
+                      {" "}
+                      {`Borella North`}
+                    </button>
                   </div>
                 </div>
               </div>
               <div className="top w-100 event-btn-place">
-                <a href='http://localhost:3000/frameevent'><button className="place_btn ml-16 h6 py-1">events</button></a>
-                <a href='http://localhost:3000/frameaditional'> <button className="place_btn ml-16 h6 py-1">Additional Garbage Request</button></a>
+                <a href="http://localhost:3000/frameevent">
+                  <button className="place_btn ml-16 h6 py-1">events</button>
+                </a>
+                <a href="http://localhost:3000/frameaditional">
+                  {" "}
+                  <button className="place_btn ml-16 h6 py-1">Additional Garbage Request</button>
+                </a>
               </div>
             </div>
           </div>
