@@ -24,10 +24,10 @@ function CollectorProfile() {
   const [empData, setEmpData] = useState(null);
 
   useEffect(() => {
-    axios.get("https://5513-123-231-61-157.in.ngrok.io/employee-list").then((response) => {
+    axios.get("https://0895-123-231-61-157.in.ngrok.io/employee-list").then((response) => {
       setEmpData(
         response.data.find((emp) => {
-          if (emp["Employee ID"] === id) {
+          if (emp["id"] === id) {
             return true;
           }
           return false;
@@ -53,8 +53,8 @@ function CollectorProfile() {
               </div>
               <div className="col-sm-8 d-flex align-items-center justify-content-center">
                 <div>
-                  <h2>{empData["Employee Name"]}</h2>
-                  <p>{empData["Employee ID"]}</p>
+                  <h2>{empData["name"]}</h2>
+                  <p>{empData["id"]}</p>
                 </div>
               </div>
             </div>
@@ -62,16 +62,16 @@ function CollectorProfile() {
             <div className="card_user card border-0 mx-2 p-4">
               <div className="row">
                 <div className="col-6 pb-3">Main Area : </div>
-                <div className="col-6 pb-3">{empData["Area ID"]}</div>
+                <div className="col-6 pb-3">{empData["area"]}</div>
                 <div className="col-6">Working Lanes :</div>
-                <div className="col-6">{empData["Lane ID"]}</div>
+                <div className="col-6">{empData["lane"]}</div>
               </div>
             </div>
           </div>
           <div className="col-md-4">
             <div className="d-flex p-3 badge_card mx-auto pb-5">
               <img src="/profile/carbon_badge.png" alt="brand" />
-              <h5 className="light_text fw-bold pt-2">{empData["Badge"]}</h5>
+              <h5 className="light_text fw-bold pt-2">{empData["badge"]}</h5>
             </div>
             <div className="d-flex align-items-center justify-content-center badge_card mx-auto pb-2">
               <div className="">
@@ -82,7 +82,7 @@ function CollectorProfile() {
                     datasets: [
                       {
                         label: "# of Votes",
-                        data: [empData["Positive Feedback Percentage"], empData["Negative Feedback Percentage"], empData["Neutral Feedback Percentage"]],
+                        data: [empData["positive"], empData["negative"], empData["neutral"]],
                         backgroundColor: ["red", "green", "yellow"],
                         borderColor: ["transparent"],
                         borderWidth: 5,

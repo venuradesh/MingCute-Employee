@@ -11,7 +11,7 @@ function Login() {
 
   useEffect(() => {
     axios
-      .get("https://5513-123-231-61-157.in.ngrok.io/employee-list")
+      .get("https://0895-123-231-61-157.in.ngrok.io/employee-list")
       .then((response) => {
         setEmpData(response.data);
         console.log(response);
@@ -24,7 +24,7 @@ function Login() {
   const login = () => {
     if (empId && password) {
       let found = empData.find((emp) => {
-        if (emp["Employee ID"] === empId) {
+        if (emp["id"] === empId) {
           return true;
         }
         return false;
